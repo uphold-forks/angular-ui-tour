@@ -581,15 +581,19 @@
          */
         self.status = statuses;
 
+        /**
+         * Returns the current steps list of the tour
+         * @returns {stepList}
+         */
+        self.getSteps = function () {
+            return stepList;
+        };
+
         //------------------ end Public API ------------------
 
         //some debugging functions
         //all are private, unsafe, subject to change
         //strongly not recommended for production code
-
-        self._getSteps = function () {
-            return stepList;
-        };
         self._getCurrentStep = getCurrentStep;
         self._setCurrentStep = setCurrentStep;
     }]);
